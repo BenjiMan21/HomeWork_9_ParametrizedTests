@@ -8,11 +8,11 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 
-@DisplayName("Параметризованный тест для домашней работы")
+@DisplayName("РџР°СЂР°РјРµС‚СЂРёР·РѕРІР°РЅРЅС‹Р№ С‚РµСЃС‚ РґР»СЏ РґРѕРјР°С€РЅРµРіРѕ Р·Р°РґР°РЅРёСЏ")
 
 public class ParametrizedWebTestWithCsvFileTest extends TestBase {
     @CsvFileSource(resources = "/TestData/DataForParametrizedTest.csv")
-    @ParameterizedTest (name = "Поиск видеоигры {0} в сервисе Steam с ценой {1}" )
+    @ParameterizedTest (name = "РџРѕРёСЃРє РІС‹РґРµРѕРёРіСЂС‹ {0} РІ СЃРµСЂРІРёСЃРµ Steam СЃ С†РµРЅРѕР№ {1}" )
     @Tags({
             @Tag ("WEB"),
             @Tag ("BLOCKER")

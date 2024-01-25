@@ -7,14 +7,14 @@ import org.junit.jupiter.params.provider.ValueSource;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 
-@DisplayName("Параметризованный тест для домашней работы")
+@DisplayName("РџР°СЂР°РјРµС‚СЂРёР·РѕРІР°РЅРЅС‹Р№ С‚РµСЃС‚ РґР»СЏ РґРѕРјР°С€РЅРµРіРѕ Р·Р°РґР°РЅРёСЏ")
 
 public class ParametrizedWebTestWithValueSourceTest extends TestBase {
     @ValueSource (strings = {
             "Baldur's Gate 3",
             "Stray"
     })
-    @ParameterizedTest (name = "Поиск видеоигры {0} в сервисе Steam" )
+    @ParameterizedTest (name = "РџРѕРёСЃРє РІС‹РґРµРѕРёРіСЂС‹ {0} РІ СЃРµСЂРІРёСЃРµ Steam" )
     @Tags({
             @Tag ("WEB"),
             @Tag ("BLOCKER")
