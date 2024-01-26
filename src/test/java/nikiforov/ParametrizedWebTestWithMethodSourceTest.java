@@ -15,14 +15,14 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class ParametrizedWebTestWithMethodSourceTest extends TestBase {
 
-    static Stream<Arguments> searchForVideoGameAtSteamService() {
+    static Stream<Arguments> dataForSearchVideoGameAtSteamService() {
         return Stream.of(
                 Arguments.of("Baldur's Gate 3", "1999 руб"),
                 Arguments.of("Stray", "1250 руб")
         );
     }
 
-    @MethodSource
+    @MethodSource ("dataForSearchVideoGameAtSteamService")
     @ParameterizedTest (name = "Поиск выдеоигры {0} в сервисе Steam с ценой {1}" )
     @Tags({
             @Tag ("WEB"),
